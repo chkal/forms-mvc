@@ -48,6 +48,11 @@ public class FormController {
 
     messages.addInfo("Got text: " + form.getText());
     messages.addInfo("Got number: " + form.getNumber());
+    messages.addInfo("Got decimal: " + form.getDecimal());
+    messages.addInfo("Got enum: " + form.getChoice());
+    messages.addInfo("Got boolean: " + form.isBool());
+
+    models.put("initial", form);
 
   }
 

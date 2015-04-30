@@ -60,6 +60,30 @@
           <p class="help-block">Some value between 1 and 100</p>
         </div>
 
+        <div class="form-group">
+          <label for="number">Decimal input</label>
+          <input id="decimal" name="decimal" type="text" class="form-control"
+                 placeholder="some decimal" value="${initial.decimal}">
+          <p class="help-block">Some value between 1.0 and 10.0</p>
+        </div>
+
+        <div class="form-group">
+          <label for="choice">Enum input</label>
+          <select id="choice" name="choice">
+            <option value="">-</option>
+            <option value="FOO">Foo</option>
+            <option value="BAR">Bar</option>
+          </select>
+          <p class="help-block">Just select one of the values</p>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input id="boolean" name="boolean" type="checkbox" value="true">
+            A simple checkbox bound to a boolean
+          </label>
+        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
 
       </form>
