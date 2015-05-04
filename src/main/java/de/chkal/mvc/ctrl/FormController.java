@@ -36,12 +36,14 @@ public class FormController {
   @ValidateOnExecution(type = ExecutableType.NONE)
   public void createItem(@BeanParam @Valid FormData form) {
 
+    // we want to populate the form with initial value
+    models.put("form", form);
+
     if (validationResult.isFailed()) {
 
       validationResult.getAllViolations().stream()
           .map(violation -> violation.getPropertyPath().toString() + " " + violation.getMessage())
           .forEach(messages::addError);
-      models.put("initial", form);
       return;
 
     }
@@ -51,8 +53,6 @@ public class FormController {
     messages.addInfo("Got decimal: " + form.getDecimal());
     messages.addInfo("Got enum: " + form.getChoice());
     messages.addInfo("Got boolean: " + form.isBool());
-
-    models.put("initial", form);
 
   }
 

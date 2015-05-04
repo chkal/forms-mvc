@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, form.scale=1">
 
     <title>Forms MVC</title>
 
@@ -49,22 +49,22 @@
         <div class="form-group">
           <label for="text">Text input</label>
           <input id="text" name="text" type="text" class="form-control"
-                 placeholder="some text" autofocus value="${initial.text}">
-          <p class="help-block">Minimal length: 5</p>
+                 placeholder="some text" autofocus value="${form.text}">
+          <p class="help-block">Minimum length: 5</p>
         </div>
 
         <div class="form-group">
           <label for="number">Number input</label>
           <input id="number" name="number" type="text" class="form-control"
-                 placeholder="some integer" value="${initial.number}">
-          <p class="help-block">Some value between 1 and 100</p>
+                 placeholder="some integer" value="${form.number}">
+          <p class="help-block">A value between 1 and 100</p>
         </div>
 
         <div class="form-group">
           <label for="number">Decimal input</label>
           <input id="decimal" name="decimal" type="text" class="form-control"
-                 placeholder="some decimal" value="${initial.decimal}">
-          <p class="help-block">Some value between 1.0 and 10.0</p>
+                 placeholder="some decimal" value="${form.decimal}">
+          <p class="help-block">A value between 1.0 and 10.0</p>
         </div>
 
         <div class="form-group">
@@ -74,7 +74,7 @@
             <option value="FOO">Foo</option>
             <option value="BAR">Bar</option>
           </select>
-          <p class="help-block">Just select one of the values</p>
+          <p class="help-block">Select one of the values</p>
         </div>
 
         <div class="checkbox">
